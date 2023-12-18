@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "animals",
+  "info": {
+    "singularName": "animal",
+    "pluralName": "animals",
+    "displayName": "animal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "kicsi",
+        "közepes",
+        "nagy"
+      ],
+      "required": false
+    },
+    "breed": {
+      "type": "enumeration",
+      "enum": [
+        "corgi",
+        "francia bulldog",
+        "golden retriever",
+        "german shepherd",
+        "husky",
+        "samoyed",
+        "shiba inu",
+        "tacskó"
+      ],
+      "required": false
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "fiú",
+        "lány"
+      ],
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "kutyák",
+        "macskák"
+      ],
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": false,
+      "default": "#222"
+    },
+    "date_of_birth": {
+      "type": "date"
+    },
+    "date_of_registry": {
+      "required": true,
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "lefoglalva"
+      ]
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "desc": {
+      "type": "blocks"
+    }
+  }
+}
